@@ -1,5 +1,11 @@
 def add(a, b):
-    return a + b
+    """My addition function
 
-result = add(1, 2)
-print("1 + 2 = {}".format(result))
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a + b
+    """
+    return a + b
