@@ -1,8 +1,18 @@
-class Square:
-    def __init__(self, size):
-        self.__size = size
+class Base():
+    """ My base class """
 
-# Example usage:
-square = Square(5)
-# Accessing the private attribute directly will result in an AttributeError
-# print(square.__size)  # This would result in an error because __size is private
+    __nb_instances = 0
+
+    def __init__(self):
+        Base.__nb_instances += 1
+        self.id = Base.__nb_instances
+
+class User(Base):
+    """ My User class """
+
+    def __init__(self):
+        super().__init__()
+        self.id += 99
+
+u = User()
+print(u.id)
