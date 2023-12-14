@@ -1,3 +1,4 @@
+"""Rectangle"""
 class BaseGeometry:
     """A base class representing geometric operations."""
     

@@ -1,3 +1,4 @@
+"""Same class or inherit from"""
 def is_kind_of_class(obj, a_class):
     """Checks if the object is an instance of, or if it's inherited from, the specified class.
 

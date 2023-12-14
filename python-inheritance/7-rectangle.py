@@ -1,3 +1,4 @@
+"""Full rectangle"""
 class BaseGeometry:
     """A class for geometric operations."""
 

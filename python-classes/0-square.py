@@ -1,4 +1,4 @@
-
+"""Square with size"""
 class Square:
     """A class that represents a square.
 

@@ -1,3 +1,4 @@
+"""Improve Geometry"""
 class BaseGeometry:
     """A base class representing geometric operations."""
 

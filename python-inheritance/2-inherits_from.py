@@ -1,3 +1,4 @@
+"""Only sub class of"""
 def inherits_from(obj, a_class):
     """Checks if the object inherits (directly or indirectly) from the specified class.
 

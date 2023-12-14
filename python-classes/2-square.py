@@ -1,3 +1,4 @@
+"""Area of a sqyare"""
 class Square:
     """A class that defines a square.
 

@@ -1,3 +1,4 @@
+"""Integer validator"""
 class BaseGeometry:
     def area(self):
         """Raises an Exception indicating that area() is not implemented."""

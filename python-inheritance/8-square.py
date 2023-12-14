@@ -1,3 +1,4 @@
+"""Square #1"""
 class BaseGeometry:
     """A class for geometric operations."""
 

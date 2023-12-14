@@ -1,3 +1,4 @@
+"""size validation"""
 class Square:
     """A class representing a square.
 
