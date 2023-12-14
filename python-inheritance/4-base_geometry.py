@@ -1,18 +1,7 @@
 """Improve Geometry"""
 class BaseGeometry:
-    """
-    A class representing basic geometry operations.
-    
-    Methods:
-        area(): Placeholder method for area calculation.
-    """
+    """A base class representing geometric operations."""
 
     def area(self):
-        """
-        Raises:
-            Exception: Indicates that the method is not implemented.
-        """
+        """Raises an Exception indicating that area() is not implemented."""
         raise Exception("area() is not implemented")
-
-bg = BaseGeometry()
-print(dir(bg))
