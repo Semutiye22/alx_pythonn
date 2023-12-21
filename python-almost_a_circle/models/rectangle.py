@@ -19,7 +19,6 @@ def area(self):
             int: Area of the rectangle.
         """
         return self.__width * self.__height
-
 def display(self):
         """
         Print the Rectangle instance as '#'.
@@ -42,6 +41,9 @@ def __init__(self, width, height, x=0, y=0, id=None):
             TypeError: If width, height, x, or y are not integers.
             ValueError: If width or height are less than or equal to 0, or if x or y are less than 0.
         """
+superclass().__init__(id)  # Call the superclass constructor with id
+
+
 self.width = width
 self.height = height
 self.x = x
