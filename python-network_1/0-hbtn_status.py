@@ -1,3 +1,8 @@
+"""
+This script fetches data from the intranet.hbtn.io/status URL using the requests library
+and displays the response body in a tabulated format.
+"""
+
 import requests
 
 def fetch_status():
@@ -15,5 +20,5 @@ def fetch_status():
     else:
         print(f"Failed to fetch data. Status code: {response.status_code}")
 
-# Execution starts here
+# Execute the function to fetch and display the status
 fetch_status()
