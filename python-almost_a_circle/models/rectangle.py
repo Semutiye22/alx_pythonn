@@ -1,8 +1,7 @@
-
-""" models/rectangle.py """
+""" create a class named rectangle """
 from models.base import Base
 
-class Rectangle:
+class Rectangle(base):
     """
     Rectangle class inheriting from Base.
 
