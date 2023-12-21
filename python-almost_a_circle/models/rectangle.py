@@ -1,7 +1,4 @@
 '''models/rectangle.py'''
-# models/rectangle.py
-from models.be.pase import Base  
-
 class Rectangle(Base):
     """
     Rectangle class inheriting from Base.
