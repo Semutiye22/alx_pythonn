@@ -1,18 +1,27 @@
-"""Defining our class Base"""
+'''base class'''
 class Base:
+    """
+    Base class for managing id attribute for other classes.
 
-    """private instance attribute initialization"""
-    nb_objects = 0
+    Attributes:
+        __nb_objects (int): Private class attribute to track the number of objects created.
+        id (int): Public instance attribute representing the object's identifier.
+    """
 
-    def __init(self, id=None):
-        """constructor for base"""
-        self.id = id
-        """if "id" is not "None", we assign self.id to id,
-        otherwise we update our private class attribute.
-        Finally assigning the new value to the public 
-        instance attribute id"""
+    __nb_objects = 0  # private class attribute
+
+    def __init__(self, id=None):
+        """
+        Initializes a Base object.
+
+        Args:
+            id (int, optional): Identifier for the object. Defaults to None.
+
+        If provided, sets the id directly to the given value.
+        If not provided, increments the __nb_objects count and assigns the new value as id.
+        """
         if id is not None:
-            self.id = id
-        else: 
+            self.id = id  # assign the public instance attribute id with the argument value
+        else:
             Base.__nb_objects += 1
-            self.id = self.__nb_objects
+            self.id = Base.__nb_objects  # assign the incremented value to the public instance attribute id
