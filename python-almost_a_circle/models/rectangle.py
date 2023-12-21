@@ -1,5 +1,5 @@
 '''models/rectangle.py'''
-from models.base import Base  # Importing the Base class
+from models.base import Base  
 
 class Rectangle(Base):
     """
