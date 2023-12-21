@@ -1,5 +1,5 @@
 """ models/rectangle.py """
-class Rectangle:
+class Rectangle(Base):
     """
     Rectangle class inheriting from Base.
 
