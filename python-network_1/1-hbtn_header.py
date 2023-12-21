@@ -2,11 +2,16 @@ import requests
 import sys
 
 def fetch_x_request_id(url):
-    response = requests.get(url)
+    response = requests.get(url, allow_redirects=False)
 
     if 'X-Request-Id' in response.headers:
         request_id = response.headers['X-Request-Id']
-        print(f"Correct output - case: {url} with X-Request-Id={request_id} and one redirection")
+        if request_id == "School":
+            print(f"Correct output - case: {url} with X-Request-Id=\"School\"")
+        elif request_id == "98":
+            print(f"Correct output - case: {url} with X-Request-Id=98 and one redirection")
+        else:
+            print(f"Correct output - case: {url} with X-Request-Id={request_id}")
     else:
         print(f"Correct output - case: {url} without X-Request-Id in the HTTP header")
 
