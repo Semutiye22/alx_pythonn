@@ -1,4 +1,5 @@
-'''rectangle'''
+'''rectangle
+'''
 from models.base import Base  # Importing the Base class
 
 class Rectangle(Base):
@@ -84,5 +85,13 @@ class Rectangle(Base):
 
         Args:
             value (int): y-coordinate value to set.
+
+        Raises:
+            TypeError: If the input value is not an integer.
+            ValueError: If the input value is less than 0.
         """
+        if not isinstance(value, int):
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
