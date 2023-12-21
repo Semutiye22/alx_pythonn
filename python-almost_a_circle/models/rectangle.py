@@ -1,7 +1,7 @@
-""" create a class named rectangle """
+""" rectangles """
 from models.base import Base
 
-class Rectangle(base):
+class Rectangle(Base):
     """
     Rectangle class inheriting from Base.
 
@@ -22,13 +22,17 @@ class Rectangle(base):
             x (int, optional): x-coordinate of the rectangle. Defaults to 0.
             y (int, optional): y-coordinate of the rectangle. Defaults to 0.
             id (int, optional): Identifier for the object. Defaults to None.
+
+        Raises:
+            TypeError: If width, height, x, or y are not integers.
+            ValueError: If width or height are less than or equal to 0, or if x or y are less than 0.
         """
         super().__init__(id)  # Call the superclass constructor with id
 
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -42,12 +46,16 @@ class Rectangle(base):
 
         Args:
             value (int): Width value to set.
+
+        Raises:
+            TypeError: If the input value is not an integer.
+            ValueError: If the input value is less than or equal to 0.
         """
-    if not isinstance(value, int):
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
-    if value <= 0:
+        if value <= 0:
             raise ValueError("width must be > 0")
-    self.__width = value
+        self.__width = value
 
     @property
     def height(self):
