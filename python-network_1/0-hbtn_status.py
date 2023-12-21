@@ -1,24 +1,23 @@
 """
 This script fetches data from the intranet.hbtn.io/status URL using the requests library
 and displays the response body in a tabulated format.
+
 """
 
 import requests
+import sys
 
-def fetch_status():
+if name == "__main__":
     """
-    Fetches data from https://intranet.hbtn.io/status using the requests library.
-    Displays the response body in a tabulated format.
+    Sends a request to a given URL and displays the value of the variable X-Request-Id in the response header.
+
+    Takes a URL as input, sends a request to the URL using the 'requests' package, 
+    and displays the value of the X-Request-Id variable found in the response header.
     """
-    url = 'https://intranet.hbtn.io/status'
+
+    url = sys.argv[1]  # Fetching URL from command line argument
+
     response = requests.get(url)
+    x_request_id = response.headers.get('X-Request-Id')
 
-    if response.status_code == 200:
-        data = response.json()
-        for key, value in data.items():
-            print(f"\t- {key}: {value}")
-    else:
-        print(f"Failed to fetch data. Status code: {response.status_code}")
-
-# Execute the function to fetch and display the status
-fetch_status()
+    print(x_request_id)
