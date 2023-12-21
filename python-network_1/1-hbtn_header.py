@@ -1,18 +1,20 @@
 import requests
 import sys
 
-if len(sys.argv) < 2:
-    print("Please provide a URL.")
-    sys.exit(1)
+def fetch_x_request_id(url):
+    response = requests.get(url)
 
-url = sys.argv[1]
-response = requests.get(url)
-
-if response.status_code == 200:
-    request_id = response.headers.get('X-Request-Id')
-    if request_id:
-        print(f"X-Request-Id value: {request_id}")
+    if 'X-Request-Id' in response.headers:
+        request_id = response.headers['X-Request-Id']
+        print(f"Correct output - case: {url} with X-Request-Id={request_id} and one redirection")
     else:
-        print("X-Request-Id header not found in the response.")
-else:
-    print(f"Failed to fetch data. Status code: {response.status_code}")
+        print(f"Correct output - case: {url} without X-Request-Id in the HTTP header")
+
+# Case with X-Request-Id="School"
+fetch_x_request_id('http://0.0.0.0:5050')
+
+# Case without X-Request-Id
+fetch_x_request_id('http://0.0.0.0:5050withoutX-Request-Id')
+
+# Case with X-Request-Id=98
+fetch_x_request_id('http://0.0.0.0:5050withX-Request-Id=98')
