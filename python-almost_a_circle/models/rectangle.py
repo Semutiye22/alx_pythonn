@@ -1,4 +1,4 @@
-# models/rectangle.py
+'''rectangle'''
 from models.base import Base  # Importing the Base class
 
 class Rectangle(Base):
