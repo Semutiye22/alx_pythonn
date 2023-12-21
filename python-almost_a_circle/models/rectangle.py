@@ -1,5 +1,5 @@
-'''models/rectangle.py'''
-from models.base import Base  
+"""models/rectangle.py"""
+from models.be.pase import Base  
 
 class Rectangle(Base):
     """
