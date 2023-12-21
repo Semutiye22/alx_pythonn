@@ -1,6 +1,6 @@
 
 """ models/rectangle.py """
-from models.base import Base  
+from models.base import Base  # Importing the Base class
 
 class Rectangle:
     """
